@@ -26,7 +26,7 @@ function AllMeetupsPage() {
       <ul>
         {DUMMY_DATA.map((meetup) => {
           return (
-            <li>{meetup.title}</li>
+            <li key={meetup.id}>{meetup.title}</li>
           )
         })}
       </ul>
