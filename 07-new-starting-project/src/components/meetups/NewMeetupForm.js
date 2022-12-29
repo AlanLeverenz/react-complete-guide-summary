@@ -4,7 +4,7 @@ import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   // sets connection with input fields
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -27,6 +27,7 @@ function NewMeetupForm() {
       description: enteredDescription
     }
 
+    props.onAddMeetup(meetupData);
     console.log(meetupData);
 
   }
