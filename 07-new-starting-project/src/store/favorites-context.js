@@ -1,9 +1,13 @@
 import { createContext, useState } from 'react';
 
 // createContext builds a component
+// adding funnctions with prop helps auto completion in the form 
 const FavoritesContext = createContext({
   favorites: [],
-  totalFavorites: 0
+  totalFavorites: 0,
+  addFavorite: (favoriteMeetup) => { },
+  removeFavorite: (meetupId) => { },
+  itemIsFavorite: (meetupId) => { }
 });
 
 // provides context to all interested components
@@ -31,7 +35,10 @@ function FavoritesContextProvider(props) {
 
   const context = {
     favorites: userFavorites,
-    totalFavorites: userFavorites.length
+    totalFavorites: userFavorites.length,
+    addFavorite: addFavoriteHandler,
+    removeFavorite: removeFavoriteHandler,
+    itemIsFavorite: itemIsFavoriteHandler
   };
 
   return <FavoritesContext.Provider value={context}>
