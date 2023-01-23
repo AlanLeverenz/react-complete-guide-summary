@@ -1,8 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
+import HomePage from './pages/Home';
 
+// https://example.com/products
 
 createBrowserRouter([
-  { path: '' },
+  { path: '/', element: <HomePage /> },
   {}
 ]);
 
