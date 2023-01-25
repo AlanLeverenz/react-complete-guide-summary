@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 
 function MainNavigation() {
+  // "end" specifies the path for "/" 
+  // can also use inline style in the NavLink
+
   return (
     <header className={classes.header}>
       <nav>
@@ -13,6 +16,10 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
+              // style={({ isActive }) => ({
+              //  textAlign: isActive ? 'center' : 'left',  
+              // })}
+              end
             >
               Home
             </NavLink>
