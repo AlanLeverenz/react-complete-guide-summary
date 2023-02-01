@@ -25,11 +25,13 @@ import HomePage from './pages/Home';
 import EventsPage from './pages/Events';
 import EventDetailPage from './pages/EventDetail';
 import RootLayout from './pages/Root';
+import ErrorPage from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       { path: 'events', element: <EventsPage /> },
