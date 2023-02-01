@@ -22,9 +22,9 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/Home';
-import EventsPage from './pages/EventsPage';
-import RootLayout from './pages/Root';
+import EventsPage from './pages/Events';
 import EventDetailPage from './pages/EventDetail';
+import RootLayout from './pages/Root';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'products', element: <EventsPage /> },
-      { path: 'products/:productId', element: <EventDetailPage /> }
+      { path: 'events', element: <EventsPage /> },
+      { path: 'events/:eventId', element: <EventDetailPage /> }
     ]
   },
 ]);
