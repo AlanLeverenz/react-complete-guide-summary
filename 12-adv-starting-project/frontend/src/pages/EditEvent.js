@@ -1,7 +1,7 @@
 function EditEvent() {
   return (
     <>
-      <h1>EditEvent Page</h1>
+      <h1>Edit Event Page</h1>
     </>
   )
 }

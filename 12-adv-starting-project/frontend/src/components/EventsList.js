@@ -14,7 +14,6 @@ function EventsList({ events }) {
               <h2>{event.title}</h2>
               <time>{event.date}</time>
             </div>
-
           </li>
         ))}
       </ul>
