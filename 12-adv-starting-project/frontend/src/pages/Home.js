@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import EventsNavigation from '../components/EventsNavigation';
 
 function HomePage() {
 
@@ -6,7 +6,7 @@ function HomePage() {
     <>
       <h1>My Home Page</h1>
       <p>
-        Go to <Link to="events">The List of Events</Link>
+        <EventsNavigation />
       </p>
     </>
   );
