@@ -13,7 +13,7 @@ function EventsDetailPage({ event }) {
   return (
     <>
       <h1>Event Detail</h1>
-      <p>{params.eventId}</p>
+      <p>Event ID: {params.eventId}</p>
       <EventItem event={id} />
       <p><Link to=".." relative='path'>Back</Link></p>
     </>
