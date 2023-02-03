@@ -1,13 +1,13 @@
-import EventsNavigation from '../components/EventsNavigation';
+// import EventsNavigation from '../components/EventsNavigation';
+// <p>
+// <EventsNavigation />
+// </p>
 
 function HomePage() {
 
   return (
     <>
-      <h1>My Home Page</h1>
-      <p>
-        <EventsNavigation />
-      </p>
+      <h1>Home Page</h1>
     </>
   );
 }
