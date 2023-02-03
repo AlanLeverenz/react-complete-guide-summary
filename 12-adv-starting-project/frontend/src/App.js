@@ -26,22 +26,15 @@ import EventsPage from './pages/Events';
 import EventDetailPage from './pages/EventDetail';
 import EventFormPage from './components/EventForm';
 import EditEventPage from './pages/EditEvent';
-import RootLayout from './pages/Root';
-import ErrorPage from './pages/Error';
+// import RootLayout from './pages/Root';
+// import ErrorPage from './pages/Error';
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: 'events', element: <EventsPage /> },
-      { path: 'events/:eventId', element: <EventDetailPage /> },
-      { path: 'events/new', element: <EventFormPage /> },
-      { path: 'events/:eventId/edit', element: <EditEventPage /> }
-    ]
-  },
+  { path: '/', element: <HomePage /> },
+  { path: 'events', element: <EventsPage /> },
+  { path: 'events/:eventId', element: <EventDetailPage /> },
+  { path: 'events/new', element: <EventFormPage /> },
+  { path: 'events/:eventId/edit', element: <EditEventPage /> }
 ]);
 
 function App() {
@@ -49,3 +42,16 @@ function App() {
 }
 
 export default App;
+
+// {
+//   path: '/',
+//   element: <RootLayout />,
+//   errorElement: <ErrorPage />,
+//   children: [
+//     { index: true, element: <HomePage /> },
+//     { path: 'events', element: <EventsPage /> },
+//     { path: 'events/:eventId', element: <EventDetailPage /> },
+//     { path: 'events/new', element: <EventFormPage /> },
+//     { path: 'events/:eventId/edit', element: <EditEventPage /> }
+//   ]
+// },

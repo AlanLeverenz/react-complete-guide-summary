@@ -1,18 +1,20 @@
 import { useParams, Link } from 'react-router-dom';
 import EventItem from '../components/EventItem';
 
-function EventsDetailPage(props) {
+function EventsDetailPage({ event }) {
   const params = useParams();
+
+  const id = params.eventId;
 
   // relative="route" goes back to parent route (in App)
   // relative="path" moves one segment in the path
 
-  //       <EventItem event={props.event} />
+  //       <EventItem event={event} />
   return (
     <>
-      <h1>Event Details</h1>
+      <h1>Event Detail</h1>
       <p>{params.eventId}</p>
-
+      <EventItem event={id} />
       <p><Link to=".." relative='path'>Back</Link></p>
     </>
   );

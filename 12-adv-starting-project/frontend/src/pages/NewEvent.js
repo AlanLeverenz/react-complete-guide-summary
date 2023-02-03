@@ -1,4 +1,4 @@
-function NewEvent() {
+function NewEventPage() {
   return (
     <>
       <h1>NewEvent Page</h1>
@@ -6,4 +6,4 @@ function NewEvent() {
   )
 }
 
-export default NewEvent;
+export default NewEventPage;
