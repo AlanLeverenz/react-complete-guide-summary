@@ -1,8 +1,3 @@
-// import EventsNavigation from '../components/EventsNavigation';
-// <p>
-// <EventsNavigation />
-// </p>
-
 function HomePage() {
 
   return (
