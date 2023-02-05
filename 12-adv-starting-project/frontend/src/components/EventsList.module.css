@@ -1,6 +1,7 @@
 .events {
   margin: 2rem auto;
   max-width: 40rem;
+  text-align: left;
 }
 
 .list {
@@ -12,7 +13,7 @@
 .item a {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
   background-color: var(--color-gray-800);
   border-radius: 4px;
   overflow: hidden;
