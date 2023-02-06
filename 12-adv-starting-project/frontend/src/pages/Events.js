@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+// import { useLoaderData } from 'react-router-dom';
 
 // gets closest loader data
 // useLoaderData gets the result of a promise
@@ -6,9 +6,9 @@ import { useLoaderData } from 'react-router-dom';
 import EventsList from '../components/EventsList';
 
 function EventsPage() {
-  const events = useLoaderData();
+  // const events = useLoaderData();
 
-  return <EventsList events={events} />;
+  return <EventsList />;
 }
 
 export default EventsPage;

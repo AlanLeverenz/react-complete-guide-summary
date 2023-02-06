@@ -30,6 +30,7 @@ import RootLayout from './pages/Root';
 import EventsRootLayout from './pages/EventsRoot';
 import ErrorPage from './pages/Error';
 
+// router knows to provide returned data to its path element
 const router = createBrowserRouter([
   {
     path: '/',
@@ -42,7 +43,9 @@ const router = createBrowserRouter([
         element: <EventsRootLayout />,
         children: [
           {
-            index: true, element: <EventsPage />, loader: async () => {
+            index: true,
+            element: <EventsPage />,
+            loader: async () => {
               const response = await fetch('http://localhost:8080/events');
 
               if (!response.ok) {
