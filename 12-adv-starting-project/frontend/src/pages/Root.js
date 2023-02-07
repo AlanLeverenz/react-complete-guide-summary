@@ -6,13 +6,13 @@ import MainNavigation from '../components/MainNavigation';
 
 // Outlet is where children of the Root component element appear
 function RootLayout() {
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
   return (
     <>
       <MainNavigation />
       <main>
-        {navigation.state === 'loading' && <p>Loading...</p>}
+        {/*navigation.state === 'loading' && <p>Loading...</p> */}
         <Outlet />
       </main>
     </>
