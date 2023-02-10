@@ -22,11 +22,11 @@ export default EventsPage;
 export async function loader() {
   // fetch returns a Response promise
   // cannot useState in loader functions
-  const response = await fetch('http://localhost:8080/events1');
+  const response = await fetch('http://localhost:8080/events');
 
   if (!response.ok) {
     // return { isError: true, message: 'Could not fetch events.' };
-    throw new Response(JSON.stringify({ message: 'Could not fetch events.' }), { status: 500, });
+    throw new Response(JSON.stringify({ message: 'Could not fetch events' }), { status: 500, });
   } else {
     return response;
   }
