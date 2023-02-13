@@ -14,7 +14,8 @@ function ErrorPage() {
 
   if (error.status === 500) {
     // gets Response data with its objects (from Events)
-    message = JSON.parse(error.data).message;
+    // don't have to parse the message when json is used in Events
+    message = error.data.message;
   }
 
   if (error.status === 404) {
