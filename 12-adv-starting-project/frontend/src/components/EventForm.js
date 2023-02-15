@@ -8,8 +8,12 @@ function EventForm({ method, event }) {
     navigate('..');
   }
 
+  // Form component omits sending data to the backend server
+  // Form component sends form data to the path action
+  // sets the 'post' method for the form using 'method' attribute
+
   return (
-    <Form className={classes.form}>
+    <Form method='post' className={classes.form}>
       <p>
         <label htmlFor="title">Title</label>
         <input

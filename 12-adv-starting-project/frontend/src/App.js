@@ -38,7 +38,11 @@ const router = createBrowserRouter([
               { path: 'edit', element: <EditEventPage /> },
             ],
           },
-          { path: 'new', element: <NewEventPage /> },
+          {
+            path: 'new',
+            element: <NewEventPage />,
+            action: () => { }
+          },
         ],
       },
     ],
