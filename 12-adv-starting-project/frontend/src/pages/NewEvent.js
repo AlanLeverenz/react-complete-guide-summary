@@ -10,6 +10,8 @@ function NewEventPage() {
 
 export default NewEventPage;
 
+// use action to send data and react to form submissions
+
 export async function action({ request, params }) {
   const data = await request.formData();
 

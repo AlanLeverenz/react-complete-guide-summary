@@ -11,6 +11,9 @@ function EventForm({ method, event }) {
   // Form component omits sending data to the backend server
   // Form component sends form data to the path action
   // sets the 'post' method for the form using 'method' attribute
+  // Form triggers the action function for the current route
+  // use action attribute to send the form to another path
+  // action="/any-other-path" 
 
   return (
     <Form method='post' className={classes.form}>
