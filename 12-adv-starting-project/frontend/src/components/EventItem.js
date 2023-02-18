@@ -12,7 +12,6 @@ function EventItem({ event }) {
         method: 'delete',
       });
     }
-
   }
 
   return (
