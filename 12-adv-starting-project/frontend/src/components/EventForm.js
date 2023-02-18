@@ -1,8 +1,10 @@
-import { Form, useNavigate, useNavigation } from 'react-router-dom';
+import { Form, useNavigate, useNavigation, useActionData } from 'react-router-dom';
 
 import classes from './EventForm.module.css';
 
 function EventForm({ method, event }) {
+  // gives access to closest action
+  const data = useActionData();
   const navigate = useNavigate();
   const navigation = useNavigation();
 
@@ -18,9 +20,15 @@ function EventForm({ method, event }) {
   // Form triggers the action function for the current route
   // use action attribute to send the form to another path
   // action="/any-other-path" 
+  // Object is JS function
 
   return (
     <Form method='post' className={classes.form}>
+      {data && data.errors && <ul>
+        {Object.values(data.errors).map((err) => (
+          <li key={err}>{err}</li>
+        ))}
+      </ul>}
       <p>
         <label htmlFor="title">Title</label>
         <input
