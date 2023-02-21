@@ -7,7 +7,8 @@
 }
 
 .newsletter input {
-  background-color: var(--color-gray-700);
+  background-color: var(--color-gray-800);
+  color: white;
 }
 
 .newsletter button {
