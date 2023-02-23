@@ -32,6 +32,7 @@ function EventDetailPage() {
 
 export default EventDetailPage;
 
+
 async function loadEvent(id) {
   const response = await fetch('http://localhost:8080/events/' + id);
 
@@ -50,6 +51,7 @@ async function loadEvent(id) {
   }
 }
 
+
 async function loadEvents() {
   const response = await fetch('http://localhost:8080/events');
 
@@ -66,11 +68,12 @@ async function loadEvents() {
   }
 }
 
+
 export async function loader({ request, params }) {
   const id = params.eventId;
 
   return defer({
-    event: loadEvent(id),
+    event: await loadEvent(id),
     events: loadEvents()
   });
 }
