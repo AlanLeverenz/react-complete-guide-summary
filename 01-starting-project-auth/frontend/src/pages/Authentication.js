@@ -8,7 +8,6 @@ function AuthenticationPage() {
 
 export default AuthenticationPage;
 
-// export the action for the route which handles request and data
 export async function action({ request }) {
   const searchParams = new URL(request.url).searchParams;
   const mode = searchParams.get('mode') || 'login';
@@ -20,18 +19,17 @@ export async function action({ request }) {
   const data = await request.formData();
   const authData = {
     email: data.get('email'),
-    passowrd: data.get('password'),
+    password: data.get('password'),
   };
 
   const response = await fetch('http://localhost:8080/' + mode, {
     method: 'POST',
-    header: {
-      'Content-Type': 'application/json'
+    headers: {
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(authData)
+    body: JSON.stringify(authData),
   });
 
-  // react-router automatically extracts data (response)
   if (response.status === 422 || response.status === 401) {
     return response;
   }
@@ -42,7 +40,4 @@ export async function action({ request }) {
 
   // soon: manage that token
   return redirect('/');
-
 }
-
-// /auth
