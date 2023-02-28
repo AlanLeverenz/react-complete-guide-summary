@@ -23,7 +23,18 @@ export async function action({ request }) {
     passowrd: data.get('password'),
   };
 
-  fetch('http://localhost:8080/' + mode);
+  const response = await fetch('http://localhost:8080/' + mode, {
+    method: 'POST',
+    header: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(authData)
+  });
+
+  // react-router automatically extracts data (response)
+  if (response.status === 422 || response.status === 401) {
+    return response;
+  }
 }
 
 // /auth
