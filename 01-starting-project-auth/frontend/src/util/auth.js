@@ -1,7 +1,24 @@
 import { redirect } from 'react-router-dom';
 
+export function getTokenDuration() {
+  const storedExpirationDate = localStorage.getItem('expiration');
+  const expirationDate = new Date(storedExpirationDate);
+  const now = new Date();
+  // getTime calculates in milliseconds
+  const duration = expirationDate.getTime() - now.getTiime();
+  return duration;
+}
+
 export function getAuthToken() {
   const token = localStorage.getItem('token');
+
+  // see if token expired
+  const tokenDuration = getTokenDuration();
+
+  if (tokenDuration < 0) {
+    return 'EXPIRED';
+  }
+
   return token;
 }
 
