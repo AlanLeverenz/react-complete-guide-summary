@@ -53,3 +53,5 @@ function App() {
 }
 
 export default App;
+
+// npm run build transforms the code and prepares it for production
