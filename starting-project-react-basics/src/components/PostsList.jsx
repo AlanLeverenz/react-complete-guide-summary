@@ -1,10 +1,10 @@
 import classes from './Post.module.css';
 import Post from './Post';
 
-function PostsList(props) {
+function PostsList({ props }) {
   return (
-    <ul className={classes.list}>
-      {props.meetups.map(post => (
+    <ul className={classes.posts}>
+      {props.map(post => (
         <li>
           <Post
             key={post.author}
