@@ -8,6 +8,10 @@ const posts = [
   {
     author: "Manuel",
     body: "Check out the full course!"
+  },
+  {
+    author: "Kimberly",
+    body: "The best novel about Norway!"
   }
 ];
 

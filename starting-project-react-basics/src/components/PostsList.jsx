@@ -1,4 +1,4 @@
-import classes from './Post.module.css';
+import classes from './PostsList.module.css';
 import Post from './Post';
 
 function PostsList({ props }) {
