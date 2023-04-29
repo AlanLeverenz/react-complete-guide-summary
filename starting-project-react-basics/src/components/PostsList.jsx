@@ -22,16 +22,21 @@ function PostsList() {
     setEnteredAuthor(event.target.value);
   }
 
+  let modalContent;
+
+  if (modalIsVisible) {
+    modalContent = (
+      <Modal onClose={hideModalHandler}>
+        <NewPost
+          onBodyChange={bodyChangeHandler}
+          onAuthorChange={authorChangeHandler} />
+      </Modal>
+    );
+  }
+
   return (
     <>
-      {modalIsVisible ? (
-        <Modal onClose={hideModalHandler}>
-          <NewPost
-            onBodyChange={bodyChangeHandler}
-            onAuthorChange={authorChangeHandler} />
-        </Modal>
-      ) : null}
-
+      {modalContent}
       <ul className={classes.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Manuel" body="Checkout the full course!" />
