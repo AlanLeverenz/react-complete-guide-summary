@@ -1,10 +1,10 @@
 import classes from './Modal.module.css';
 
-function Modal() {
+function Modal({ children }) {
   return (
     <>
       <div className={classes.backdrop} />
-      <dialog className={classes.modal}></dialog>
+      <dialog open className={classes.modal}>{children}</dialog>
     </>
   );
 }
