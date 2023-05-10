@@ -1,6 +1,3 @@
-
-
-
 import { useState } from 'react';
 
 import PostsList from './components/PostsList';
