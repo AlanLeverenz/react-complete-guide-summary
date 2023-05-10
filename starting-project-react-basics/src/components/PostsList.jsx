@@ -29,6 +29,7 @@ function PostsList({ isPosting, onStopPosting }) {
         </Modal>
       )}
       <ul className={classes.posts}>
+        <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Manuel" body="Check out the full course!" />
       </ul>
     </>
