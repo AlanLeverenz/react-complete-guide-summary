@@ -3,6 +3,7 @@ import { useState } from 'react';
 import classes from './NewPost.module.css';
 
 function NewPost({ onCancel }) {
+
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
