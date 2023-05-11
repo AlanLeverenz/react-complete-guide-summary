@@ -23,7 +23,7 @@ function PostsList({ isPosting, onStopPosting }) {
         </Modal>
       )}
       <ul className={classes.posts}>
-        {posts.map((post) => <Post author={post.author} body={post.body} />)}
+        {posts.map((post) => <Post key={post.body} author={post.author} body={post.body} />)}
       </ul>
     </>
   );
