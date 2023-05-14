@@ -17,7 +17,11 @@ function PostsList({ isPosting, onStopPosting }) {
       const resData = await response.json();
       setPosts(resData.posts);
     }
+
+    fetchPosts();
   }, []);
+
+  // will only execute once after the component renders if empty dependencies array
 
   function addPostHandler(postData) {
     fetch('http://locahost:8080/posts', {
