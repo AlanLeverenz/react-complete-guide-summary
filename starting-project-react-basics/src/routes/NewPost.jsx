@@ -39,7 +39,12 @@ function NewPost() {
 
 export default NewPost;
 
-export function action() {
+// request' is the object that is requested by the action
+// Form function handles form functions within react on client side
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const postData = Object.fromEntries(formData); // { body: '...', author: '...'}
   fetch('http://locahost:8080/posts', {
     method: 'POST',
     body: JSON.stringify(postData),
