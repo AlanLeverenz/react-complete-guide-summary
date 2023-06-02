@@ -1,3 +1,4 @@
+import React from 'react';
 import './Card.css';
 
 // children is a reserved name show content between opening/closing tags
