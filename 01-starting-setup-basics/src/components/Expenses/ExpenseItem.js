@@ -13,6 +13,8 @@ const ExpenseItem = (props) => {
     console.log({ title });
   };
 
+  // setTitle schedules a change. console.log isn't changed (yet)
+
   return (
     <Card className='expense-item'>
       <ExpenseDate
