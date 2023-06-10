@@ -14,25 +14,34 @@ const ExpenseForm = () => {
   })
 
   const titleChangeHandler = (event) => {
-    // use spread operator to retain other state values in the object
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
-    })
+    // use a function within the function so React starts with the latest previous state
+    setUserInput((prevState) => {
+      return (
+        {
+          ...prevState,
+          enteredTitle: event.target.value
+        });
+    });
   };
 
   const amountChangeHandler = (event) => {
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value
-    })
+    setUserInput((prevState) => {
+      return (
+        {
+          ...prevState,
+          enteredAmount: event.target.value
+        });
+    });
   };
 
   const dateChangeHandler = (event) => {
-    setUserInput({
-      ...userInput,
-      enteredDate: event.target.value
-    })
+    setUserInput((prevState) => {
+      return (
+        {
+          ...prevState,
+          enteredDate: event.target.value
+        });
+    });
   };
 
 
