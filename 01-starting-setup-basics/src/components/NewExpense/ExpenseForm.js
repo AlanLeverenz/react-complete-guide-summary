@@ -56,6 +56,8 @@ const ExpenseForm = (props) => {
       amount: enteredAmount,
       date: new Date(enteredDate)
     };
+    // using the function that was passed down as a prop from parent (NewExpense) 
+    // the data becomes a value parameter for the function from the parent
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
