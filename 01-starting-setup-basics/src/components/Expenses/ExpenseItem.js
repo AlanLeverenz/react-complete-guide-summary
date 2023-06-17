@@ -6,7 +6,7 @@ import Card from '../UI/Card';
 
 const ExpenseItem = (props) => {
 
-  // setTitle schedules a change. console.log isn't changed (yet)
+  // presentational or dumb (stateless) component
 
   return (
     <Card className='expense-item'>
