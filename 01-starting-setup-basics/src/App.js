@@ -31,8 +31,11 @@ const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = expense => {
-    setExpenses([expense, ...expenses]);
-  }
+    // need function to get latest snapshot
+    setExpenses((prevExpenses) => {
+      return [expense, ...expenses];
+    });
+  };
 
   return (
     <div>
