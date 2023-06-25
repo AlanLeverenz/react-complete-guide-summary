@@ -33,7 +33,7 @@ const App = () => {
   const addExpenseHandler = expense => {
     // need function to get latest snapshot
     setExpenses((prevExpenses) => {
-      return [expense, ...expenses];
+      return [expense, ...prevExpenses];
     });
   };
 
