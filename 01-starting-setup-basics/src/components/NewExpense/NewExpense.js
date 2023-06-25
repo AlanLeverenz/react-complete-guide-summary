@@ -23,6 +23,9 @@ const NewExpense = (props) => {
     setIsEditing(false);
   };
 
+
+  // make form conditional on clicking the Add New Expense button
+
   return (
     <div className='new-expense'>
       {!isEditing && (
