@@ -12,6 +12,10 @@ const ExpenseForm = (props) => {
   //   enteredDate: '',
   // });
 
+  // assignment 4
+  // const [formView, setFormView] = useState(false);
+
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
     // setUserInput({
@@ -52,7 +56,18 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    // toggleForm();  // assignment 4
   };
+
+  // assignment 4
+  // const toggleForm = (event) => {
+  //   (formView) ? setFormView(false) : setFormView(true);
+  // }
+
+  // assignment 4
+  // if (!formView) {
+  //   return <button type="button" onClick={toggleForm}>Add New Expense</button>
+  // }
 
   return (
     <form onSubmit={submitHandler}>
@@ -95,3 +110,5 @@ const ExpenseForm = (props) => {
 };
 
 export default ExpenseForm;
+
+// {toggleForm}
