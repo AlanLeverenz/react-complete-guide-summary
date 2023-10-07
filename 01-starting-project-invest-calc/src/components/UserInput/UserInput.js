@@ -19,9 +19,16 @@ const UserInput = () => {
     console.log('RESET');
   };
 
+  // setState function automatically receives the previous input
+  // putting [input] in brackets makes it the key for the valu
   const inputChangeHandler = (input, value) => {
-    console.log(input, value);
-  };
+    setUserInput((prevInput) => {
+      return {
+        ...prevInput,
+        [input]: value,
+      }
+    });
+  }
 
   // arrow function inserted in onChange event is only activated when the value changes
   // React automatically returns the event and its target when the value is changed
