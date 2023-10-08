@@ -34,11 +34,8 @@ function App() {
   return (
     <div>
       <Header />
-
       <UserInput />
-
       <ResultsTable />
-
     </div>
   );
 }
