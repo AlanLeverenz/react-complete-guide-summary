@@ -13,8 +13,8 @@ const UserInput = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // ...
-    console.log('SUBMIT');
+
+    props.onCalculate(userInput);
   };
 
   const resetHandler = () => {
