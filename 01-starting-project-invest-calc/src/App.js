@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <Header />
-      <UserInput />
+      <UserInput onCalculate={calculateHandler} />
       <ResultsTable />
     </div>
   );
