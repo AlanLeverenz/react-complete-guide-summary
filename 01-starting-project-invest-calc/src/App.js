@@ -36,7 +36,11 @@ function App() {
   return (
     <div>
       <Header />
+
       <UserInput onCalculate={calculateHandler} />
+
+      {!userInput && <p>No investment calculated yet.</p>}
+      {userInput && <ResultsTable />}
       <ResultsTable />
     </div>
   );
