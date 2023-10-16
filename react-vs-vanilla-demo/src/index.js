@@ -13,6 +13,4 @@ root.render(
   </StrictMode>
 );
 
-// root.render(
-//   <App />
-// );
+// will not run without a React build process
