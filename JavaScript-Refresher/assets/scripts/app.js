@@ -60,7 +60,9 @@ console.log(hobbies);
 // const index = hobbies.findIndex((item) === "cooking");
 // console.log(item);
 
-const editedHobbies = hobbies.map((item) =>
-  item + "!");
+const editedMaps = hobbies.map((item) => item + "!")
+console.log(editedMaps);
+
+const editedHobbies = hobbies.map((item) => ({ text: item }));
 console.log(editedHobbies);
 
