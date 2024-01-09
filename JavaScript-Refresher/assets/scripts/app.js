@@ -19,33 +19,33 @@
 // const greeting = createGreeting('Alan');
 // console.log(greeting);
 
-const user = {
-  name: 'Max',
-  age: 34,
-  greet() {
-    console.log('Hello');
-    console.log(this.age)
-  }
-};
+// const user = {
+//   name: 'Max',
+//   age: 34,
+//   greet() {
+//     console.log('Hello');
+//     console.log(this.age)
+//   }
+// };
 
-console.log(user.name);
-user.greet();
+// console.log(user.name);
+// user.greet();
 
-// class name begins with capitol letter
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// // class name begins with capitol letter
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  greet() {
-    console.log("Hi!");
-  }
-}
+//   greet() {
+//     console.log("Hi!");
+//   }
+// }
 
-const user1 = new User("Manual", 35);
-console.log(user1);
-user1.greet();
+// const user1 = new User("Manual", 35);
+// console.log(user1);
+// user1.greet();
 
 
 // export default (userName, message) => {
@@ -53,5 +53,7 @@ user1.greet();
 //   return userName + message;
 // }
 
+const hobbies = ['sports', 'cooking', 'reading'];
 
+console.log(hobbies[0]);
 
