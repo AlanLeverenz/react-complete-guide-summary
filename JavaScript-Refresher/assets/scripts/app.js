@@ -60,9 +60,17 @@ console.log(hobbies);
 // const index = hobbies.findIndex((item) === "cooking");
 // console.log(item);
 
-const editedMaps = hobbies.map((item) => item + "!")
-console.log(editedMaps);
+// const editedMaps = hobbies.map((item) => item + "!")
+// console.log(editedMaps);
 
-const editedHobbies = hobbies.map((item) => ({ text: item }));
-console.log(editedHobbies);
+// const editedHobbies = hobbies.map((item) => ({ text: item }));
+// console.log(editedHobbies);
+
+// const userNameData = ['max', 'leverenz'];
+// const firstName = userNameData[0];
+// const lastName = userNameData[1];
+
+const [firstName, lastName] = ['max', 'leverenz'];
+console.log(firstName);
+console.log(lastName);
 
