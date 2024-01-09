@@ -70,7 +70,22 @@ console.log(hobbies);
 // const firstName = userNameData[0];
 // const lastName = userNameData[1];
 
-const [firstName, lastName] = ['max', 'leverenz'];
-console.log(firstName);
-console.log(lastName);
+// const [firstName, lastName] = ['max', 'leverenz'];
+// console.log(firstName);
+// console.log(lastName);
+
+// const user = {
+//   name: 'max',
+//   age: 34
+// };
+// const name = user.name;
+// const age = user.age;
+
+const { name: userName, age } = {
+  name: 'max',
+  age: 34
+};
+
+console.log(userName);
+console.log(age);
 
