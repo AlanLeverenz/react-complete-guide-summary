@@ -54,6 +54,13 @@
 // }
 
 const hobbies = ['sports', 'cooking', 'reading'];
+hobbies.push('working');
+console.log(hobbies);
 
-console.log(hobbies[0]);
+// const index = hobbies.findIndex((item) === "cooking");
+// console.log(item);
+
+const editedHobbies = hobbies.map((item) =>
+  item + "!");
+console.log(editedHobbies);
 
