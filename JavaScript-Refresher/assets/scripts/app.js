@@ -116,3 +116,9 @@ if (password == "Hello") {
 } else {
   console.log("access not granted.")
 }
+
+const hobbies = ['sports', 'cooking']
+
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
