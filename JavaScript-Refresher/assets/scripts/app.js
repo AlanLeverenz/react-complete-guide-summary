@@ -89,20 +89,30 @@
 // console.log(userName);
 // console.log(age);
 
-const hobbies = ['sports', 'cooking'];
+// const hobbies = ['sports', 'cooking'];
 
-const user = {
-  name: 'max',
-  age: 34
-};
+// const user = {
+//   name: 'max',
+//   age: 34
+// };
 
-const newHobbies = ['Reading'];
-const mergedHobbies = [...hobbies, ...newHobbies];
-console.log(mergedHobbies);
+// const newHobbies = ['Reading'];
+// const mergedHobbies = [...hobbies, ...newHobbies];
+// console.log(mergedHobbies);
 
-const extendedUser = {
-  isAdmin: true,
-  ...user
+// const extendedUser = {
+//   isAdmin: true,
+//   ...user
+// }
+
+// console.log(extendedUser);
+
+const password = prompt('Your password');
+
+if (password == "Hello") {
+  console.log("Hello works");
+} else if (password == "hello") {
+  console.log("hello works");
+} else {
+  console.log("access not granted.")
 }
-
-console.log(extendedUser);
