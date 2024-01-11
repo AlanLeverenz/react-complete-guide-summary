@@ -95,7 +95,7 @@ const hobbies = ['sports', 'cooking']; const user = {
 };
 
 const newHobbies = ['Reading'];
-const mergedHobbies = [hobbies, newHobbies];
+const mergedHobbies = [...hobbies, ...newHobbies];
 console.log(mergedHobbies);
 
 
