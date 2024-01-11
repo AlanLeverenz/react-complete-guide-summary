@@ -53,9 +53,9 @@
 //   return userName + message;
 // }
 
-const hobbies = ['sports', 'cooking', 'reading'];
-hobbies.push('working');
-console.log(hobbies);
+// const hobbies = ['sports', 'cooking', 'reading'];
+// hobbies.push('working');
+// console.log(hobbies);
 
 // const index = hobbies.findIndex((item) === "cooking");
 // console.log(item);
@@ -81,11 +81,21 @@ console.log(hobbies);
 // const name = user.name;
 // const age = user.age;
 
-const { name: userName, age } = {
+// const hobbies = ['sports', 'cooking'];const { name: userName, age } = {
+//   name: 'max',
+//   age: 34
+// };
+
+// console.log(userName);
+// console.log(age);
+
+const hobbies = ['sports', 'cooking']; const user = {
   name: 'max',
   age: 34
 };
 
-console.log(userName);
-console.log(age);
+const newHobbies = ['Reading'];
+const mergedHobbies = [hobbies, newHobbies];
+console.log(mergedHobbies);
+
 
