@@ -89,7 +89,9 @@
 // console.log(userName);
 // console.log(age);
 
-const hobbies = ['sports', 'cooking']; const user = {
+const hobbies = ['sports', 'cooking'];
+
+const user = {
   name: 'max',
   age: 34
 };
@@ -98,4 +100,9 @@ const newHobbies = ['Reading'];
 const mergedHobbies = [...hobbies, ...newHobbies];
 console.log(mergedHobbies);
 
+const extendedUser = {
+  isAdmin: true,
+  ...user
+}
 
+console.log(extendedUser);
