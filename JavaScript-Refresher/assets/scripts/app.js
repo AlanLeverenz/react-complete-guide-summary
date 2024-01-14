@@ -128,8 +128,15 @@ function handleTimeout() {
 }
 
 const handleTimeout2 = () => {
-  console.log("Time out again");
+  console.log("Timed out again");
 };
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 3000);
+setTimeout(() => {
+  console.log("More time outs");
+}, 4000);
+
 
 
 
