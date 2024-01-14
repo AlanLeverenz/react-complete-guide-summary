@@ -123,26 +123,38 @@
 //   console.log(hobby);
 // }
 
-function handleTimeout() {
-  console.log("Timed out!");
+// function handleTimeout() {
+//   console.log("Timed out!");
+// }
+
+// const handleTimeout2 = () => {
+//   console.log("Timed out again");
+// };
+
+// // passing a handler to setTimeout
+// setTimeout(handleTimeout, 2000);
+// setTimeout(handleTimeout2, 3000);
+// setTimeout(() => {
+//   console.log("More time outs");
+// }, 4000);
+
+// // pass functions as values
+// function greeter(greetFn) {
+//   greetFn();
+// }
+// greeter(() => console.log("hi"));
+
+function init() {
+  const message = "...";
+  function greet() {
+    console.log('Hi!' + message);
+  }
+
+  greet();
 }
 
-const handleTimeout2 = () => {
-  console.log("Timed out again");
-};
+init();
 
-// passing a handler to setTimeout
-setTimeout(handleTimeout, 2000);
-setTimeout(handleTimeout2, 3000);
-setTimeout(() => {
-  console.log("More time outs");
-}, 4000);
-
-// pass functions as values
-function greeter(greetFn) {
-  greetFn();
-}
-greeter(() => console.log("hi"));
 
 
 
