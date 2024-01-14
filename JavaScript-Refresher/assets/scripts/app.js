@@ -144,22 +144,24 @@
 // }
 // greeter(() => console.log("hi"));
 
-function init() {
-  const message = "...";
-  function greet() {
-    console.log('Hi!' + message);
-  }
+// function init() {
+//   const message = "...";
+//   function greet() {
+//     console.log('Hi!' + message);
+//   }
 
-  greet();
-}
+//   greet();
+// }
 
-init();
+// init();
 
+// primitives
+let userMessage = 'Hello';
+userMessage = userMessage.concat("!");
 
+// arrays are objects with reference values 
+// that are stored in memory
 
-
-
-
-
-
-
+const hobbies = ['sports', 'cooking'];
+hobbies.push('working');
+console.log(hobbies);
