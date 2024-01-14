@@ -131,11 +131,22 @@ const handleTimeout2 = () => {
   console.log("Timed out again");
 };
 
+// passing a handler to setTimeout
 setTimeout(handleTimeout, 2000);
 setTimeout(handleTimeout2, 3000);
 setTimeout(() => {
   console.log("More time outs");
 }, 4000);
+
+// pass functions as values
+function greeter(greetFn) {
+  greetFn();
+}
+greeter(() => console.log("hi"));
+
+
+
+
 
 
 
