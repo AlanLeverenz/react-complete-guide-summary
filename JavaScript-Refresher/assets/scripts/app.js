@@ -107,18 +107,29 @@
 
 // console.log(extendedUser);
 
-const password = prompt('Your password');
+// const password = prompt('Your password');
 
-if (password == "Hello") {
-  console.log("Hello works");
-} else if (password == "hello") {
-  console.log("hello works");
-} else {
-  console.log("access not granted.")
+// if (password == "Hello") {
+//   console.log("Hello works");
+// } else if (password == "hello") {
+//   console.log("hello works");
+// } else {
+//   console.log("access not granted.")
+// }
+
+// const hobbies = ['sports', 'cooking']
+
+// for (const hobby of hobbies) {
+//   console.log(hobby);
+// }
+
+function handleTimeout() {
+  console.log("Timed out!");
 }
 
-const hobbies = ['sports', 'cooking']
+const handleTimeout2 = () => {
+  console.log("Time out again");
+};
 
-for (const hobby of hobbies) {
-  console.log(hobby);
-}
+
+
