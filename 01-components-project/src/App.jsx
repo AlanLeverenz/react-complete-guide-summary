@@ -1,17 +1,6 @@
 import { CORE_CONCEPTS } from './data';
-import reactImg from './assets/react-core-concepts.png';
-import Header from './components/Header';
-
-// object destructuring
-function CoreConcept({ image, title, description }) {
-  return (
-    <li>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  );
-}
+import Header from './components/Header.jsx';
+import CoreConcept from './components/CoreConcept.jsx';
 
 function App() {
   return (
