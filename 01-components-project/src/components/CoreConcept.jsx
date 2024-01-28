@@ -7,3 +7,5 @@ export function CoreConcept({ image, title, description }) {
     </li>
   );
 }
+
+export default CoreConcept;
