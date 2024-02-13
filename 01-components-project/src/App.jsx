@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
-import { CORE_CONCEPTS } from './data';
 import Header from './components/Header/Header.jsx';
-import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
+import CoreConcepts from './components/CoreConcepts.jsx';
 import { EXAMPLES } from './data.js';
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
     <>
       <Header />
       <main>
-
+        <CoreConcepts />
         <section id="examples">
           <h2>Examples</h2>
           <menu>
