@@ -10,7 +10,7 @@ export default function Player({ initialName, symbol }) {
   }
 
   function handleChange(event) {
-    console.log(event)
+    // console.log(event):
     setPlayerName(event.target.value);
   }
 
@@ -28,7 +28,7 @@ export default function Player({ initialName, symbol }) {
   // HTML RENDERING
   return (
     <li>
-      <span classNAme="player">
+      <span className="player">
         {editablePlayerName}
         <span className="player-symbol">{symbol}</span>
       </span>
