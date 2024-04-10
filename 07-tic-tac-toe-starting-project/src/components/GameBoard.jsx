@@ -16,18 +16,21 @@ export default function GameBoard() {
     const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])];
     setGameBoard((prevGameBoard) => {
       updatedBoard[rowIndex][colIndex] = 'X';
-      return prevGameBoard;
+      return updatedBoard;
     });
   }
 
   return <ol id="game-board">
-    {initialGameBoard.map((row, rowIndex) => <li key={rowIndex}>
-      <ol>
-        {row.map((playerSymbol, colIndex) => <li key={colIndex}>
-          <button onClick={handleSelectSquare}>{playerSymbol}</button></li>)}
-      </ol>
-
-    </li>)}
+    {initialGameBoard.map((row, rowIndex) => (
+      <li key={rowIndex}>
+        <ol>
+          {row.map((playerSymbol, colIndex) => (
+            <li key={colIndex}>
+              <button onClick={() => handleSelectSquare(rowIndex, colIndex)}>{playerSymbol}</button>
+            </li>
+          ))}
+        </ol>
+      </li>
+    ))}
   </ol>;
-
 }
