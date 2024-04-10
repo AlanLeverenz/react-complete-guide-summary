@@ -13,8 +13,8 @@ export default function GameBoard() {
   // this makes the data immutable before updating
 
   function handleSelectSquare(rowIndex, colIndex) {
-    const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])];
     setGameBoard((prevGameBoard) => {
+      const updatedBoard = [...prevGameBoard.map(innerArray => [...innerArray])];
       updatedBoard[rowIndex][colIndex] = 'X';
       return updatedBoard;
     });
