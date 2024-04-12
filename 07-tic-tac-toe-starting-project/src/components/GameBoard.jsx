@@ -6,7 +6,7 @@ const initialGameBoard = [
   [null, null, null]
 ];
 
-export default function GameBoard() {
+export default function GameBoard({ onSelectSquare }) {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
   // need a copy of the array so the original isn't updated out of sequence for update events
@@ -18,6 +18,8 @@ export default function GameBoard() {
       updatedBoard[rowIndex][colIndex] = 'X';
       return updatedBoard;
     });
+
+    onSelectSquare();
   }
 
   return <ol id="game-board">
