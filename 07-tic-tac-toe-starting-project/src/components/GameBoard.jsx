@@ -11,6 +11,7 @@ export default function GameBoard({ onSelectSquare }) {
 
   // need a copy of the array so the original isn't updated out of sequence for update events
   // this makes the data immutable before updating
+  // the current gameboard is automatically used by React
 
   function handleSelectSquare(rowIndex, colIndex) {
     setGameBoard((prevGameBoard) => {
