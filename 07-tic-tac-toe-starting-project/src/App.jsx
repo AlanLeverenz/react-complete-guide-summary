@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
+import Log from './components/Log.jsx';
 import Player from './components/Player.jsx';
 import GameBoard from './components/GameBoard.jsx';
 
 function App() {
+  const [gameTurns, setGameTurns] = useState([]);
   const [activePlayer, setActivePlayer] = useState('X');
 
   function handleSelectSquare() {
