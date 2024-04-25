@@ -3,49 +3,7 @@ import { useState } from 'react';
 import Player from './components/Player.jsx';
 import GameBoard from './components/GameBoard.jsx';
 import Log from './components/Log.jsx';
-
-const WINNING_COMBINATIONS = [
-  [
-    { row: 0, column: 0 },
-    { row: 0, column: 1 },
-    { row: 0, column: 2 },
-  ],
-  [
-    { row: 1, column: 0 },
-    { row: 1, column: 1 },
-    { row: 1, column: 2 },
-  ],
-  [
-    { row: 2, column: 0 },
-    { row: 2, column: 1 },
-    { row: 2, column: 2 },
-  ],
-  [
-    { row: 0, column: 0 },
-    { row: 1, column: 0 },
-    { row: 2, column: 0 },
-  ],
-  [
-    { row: 0, column: 1 },
-    { row: 1, column: 1 },
-    { row: 2, column: 1 },
-  ],
-  [
-    { row: 0, column: 2 },
-    { row: 1, column: 2 },
-    { row: 2, column: 2 },
-  ],
-  [
-    { row: 0, column: 0 },
-    { row: 1, column: 1 },
-    { row: 2, column: 2 },
-  ],
-  [
-    { row: 0, column: 2 },
-    { row: 1, column: 1 },
-    { row: 2, column: 0 },
-  ],
-];
+import { WINNING_COMBINATIONS } from './winning-combinations.js';
 
 function deriveActivePlayer(gameTurns) {
   let currentPlayer = 'X';
