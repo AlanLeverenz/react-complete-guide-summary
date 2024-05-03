@@ -23,7 +23,7 @@ function deriveActivePlayer(gameTurns) {
 }
 
 function deriveGameBoard(gameTurns) {
-  let gameBoard = initialGameBoard = [...initialGameBoard.map((array) => [...array])];
+  let gameBoard = [...initialGameBoard.map((array) => [...array])];
 
   for (const turn of gameTurns) {
     const { square, player } = turn;
@@ -54,6 +54,7 @@ function deriveWinner(gameBoard, players) {
   return winner;
 }
 
+
 function App() {
 
   const [players, setPlayers] = useState({
@@ -61,6 +62,7 @@ function App() {
     'O': 'Player 2'
   });
 
+  // single source of truth using derived state values
   const [gameTurns, setGameTurns] = useState([]);
 
   const activePlayer = deriveActivePlayer(gameTurns);
@@ -79,6 +81,10 @@ function App() {
 
       return updatedTurns;
     });
+  }
+
+  function handleRestart() {
+    setGameTurns([]);
   }
 
   function handlePlayerNameChange(symbol, newName) {
